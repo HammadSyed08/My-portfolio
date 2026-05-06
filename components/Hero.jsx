@@ -6,6 +6,17 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [showEmailTooltip, setShowEmailTooltip] = useState(false);
+
+
+  const handleEmailClick = (e) => {
+
+    window.location.href = 'mailto:hammadsyed061@gmail.com';
+    navigator.clipboard.writeText('hammadsyed061@gmail.com').then(() => {
+      setShowEmailTooltip(true);
+      setTimeout(() => setShowEmailTooltip(false), 2000);
+    });
+  };
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -104,7 +115,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-white mb-6 leading-tight tracking-tight max-w-4xl"
           >
-            Hi, I&apos;m{' '}
+            Hi, I&apos;m{' '} <br />
             <span className="gradient-text bg-gradient-to-r from-primary-400 via-blue-400 to-violet-400">
               Syed Hammad Ali
             </span>
@@ -217,13 +228,23 @@ export default function Hero() {
               >
                 <FiLinkedin size={20} />
               </a>
-              <a
-                href="mailto:hammadsyed061@gmail.com"
-                className="p-3 bg-dark-800/80 hover:bg-dark-700 border border-dark-700/50 hover:border-primary-500/30 text-dark-300 hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm"
-                title="Email"
-              >
-                <FiMail size={20} />
-              </a>
+              <div className="relative">
+                <button
+                  onClick={handleEmailClick}
+                  className="p-3 bg-dark-800/80 hover:bg-dark-700 border border-dark-700/50 hover:border-primary-500/30 text-dark-300 hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm"
+                  title="Email - Click to send email"
+                >
+                  <FiMail size={20} />
+                </button>
+
+                {/* Tooltip confirmation */}
+                {showEmailTooltip && (
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-blue-500/90 text-white text-xs rounded-lg whitespace-nowrap">
+                    Email copied! 
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-green-500/90" />
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Stats */}
