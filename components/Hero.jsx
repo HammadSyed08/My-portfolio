@@ -211,7 +211,7 @@ export default function Hero() {
             {/* Social Icons */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/HammadSyed08"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-dark-800/80 hover:bg-dark-700 border border-dark-700/50 hover:border-primary-500/30 text-dark-300 hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm"
@@ -220,7 +220,7 @@ export default function Hero() {
                 <FiGithub size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/hammadsyed88/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-dark-800/80 hover:bg-dark-700 border border-dark-700/50 hover:border-primary-500/30 text-dark-300 hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm"

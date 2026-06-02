@@ -5,36 +5,43 @@ const projects = [
     title: 'Otoboe Event Organization',
     description: 'Full-featured event organization website with booking & management systems.',
     category: 'Web Application',
+    link: 'https://www.otoobe.com/',
   },
   {
     title: 'POS Admin Panel',
     description: 'Point of Sale administration dashboard with real-time data & inventory management.',
     category: 'Admin Dashboard',
+    link: 'https://pos-konto-web.vercel.app/',
   },
   {
     title: 'Weather Updates',
     description: 'Real-time weather tracking application with location-based forecasts.',
     category: 'Web Application',
+    link: 'https://weather-appunique.netlify.app/',
   },
   {
     title: 'Onertrip',
     description: 'Travel planning platform with destination guides & booking features.',
     category: 'Travel Platform',
+    link: 'https://onertrip.com/',
   },
   {
     title: 'Onereducation',
     description: 'Educational platform for online learning & course management.',
     category: 'Education Platform',
+    link: 'https://onereducation.eu/',
   },
   {
     title: 'Luxum Builders',
     description: 'Professional WordPress website for a construction & building company.',
     category: 'WordPress',
+    link: 'https://www.luxumbuilders.com/',
   },
   {
     title: 'Nature Fitness',
     description: 'Fitness & wellness website with class schedules & membership management.',
     category: 'WordPress',
+    link: 'https://nbnaturefitness.com/',
   },
 ];
 
@@ -59,13 +66,17 @@ export default function Projects() {
                 </span>
                 <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
-                    href="#"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 bg-dark-800 hover:bg-dark-700 rounded-lg text-dark-300 hover:text-white transition-colors"
                   >
                     <FiGithub size={16} />
                   </a>
                   <a
-                    href="#"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 bg-dark-800 hover:bg-dark-700 rounded-lg text-dark-300 hover:text-white transition-colors"
                   >
                     <FiExternalLink size={16} />
@@ -80,7 +91,7 @@ export default function Projects() {
 
         <div className="text-center mt-10">
           <a
-            href="https://github.com"
+            href="https://github.com/HammadSyed08"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline inline-flex items-center gap-2"
