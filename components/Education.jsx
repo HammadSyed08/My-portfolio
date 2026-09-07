@@ -13,6 +13,13 @@ const education = [
     period: '2012 - 2014',
     type: 'Completed',
   },
+  {
+    degree: 'AI Automation (Short Course)',
+    school: 'Rohi eSkills Learning Hub',
+    period: 'June - August (3 months)',
+    type: 'Completed',
+    description: 'Main course: AI Automation using Zapier, Make.com, n8n, and Python. Short intro to Go High Level.',
+  },
 ];
 
 export default function Education() {
@@ -44,6 +51,11 @@ export default function Education() {
                 </div>
                 <p className="text-dark-300 font-medium">{edu.school}</p>
                 <p className="text-dark-500 text-sm mt-1">{edu.period}</p>
+                {edu.description && (
+                  <p className="text-dark-400 text-sm mt-2 leading-relaxed">
+                    {edu.description}
+                  </p>
+                )}
               </div>
             </div>
           ))}

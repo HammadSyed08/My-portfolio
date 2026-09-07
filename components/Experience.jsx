@@ -4,17 +4,17 @@ const experiences = [
   {
     title: 'Associate Software Engineer',
     company: 'Astute Technology',
-    period: 'January 2025 - Present',
+    period: 'March 2025 - May 2026',
     location: 'Remote',
     tech: ['React.js', 'Next.js', 'Firebase'],
-    current: true,
+    current: false,
   },
   {
     title: 'Frontend Web Developer',
     company: 'CODECURE.PK',
     period: 'July 2024 - December 2024',
     location: 'Remote',
-    tech: ['React.js', 'Next.js', 'Tailwind CSS'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'WordPress Elementor'],
     current: false,
   },
 ];
@@ -26,6 +26,14 @@ export default function Experience() {
         <div className="text-center mb-16">
           <h2 className="section-title">Work Experience</h2>
           <p className="section-subtitle">My professional journey</p>
+          {/* Open to Work badge */}
+          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium border border-green-500/30">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+            Open to Work
+          </div>
         </div>
 
         <div className="max-w-3xl mx-auto">
