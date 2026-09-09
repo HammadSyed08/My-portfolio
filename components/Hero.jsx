@@ -11,8 +11,8 @@ export default function Hero() {
 
   const handleEmailClick = (e) => {
 
-    window.location.href = 'mailto:hammadsyed061@gmail.com';
-    navigator.clipboard.writeText('hammadsyed061@gmail.com').then(() => {
+    window.location.href = 'mailto:hammadword08@gmail.com';
+    navigator.clipboard.writeText('hammadword08@gmail.com').then(() => {
       setShowEmailTooltip(true);
       setTimeout(() => setShowEmailTooltip(false), 2000);
     });
@@ -156,10 +156,10 @@ export default function Hero() {
             <div className="flex items-center gap-2">
               <FiMail className="text-primary-400" size={16} />
               <a
-                href="mailto:hammadsyed061@gmail.com"
+                href="mailto:hammadword08@gmail.com"
                 className="hover:text-primary-400 transition-colors"
               >
-                hammadsyed061@gmail.com
+                hammadword08@gmail.com
               </a>
             </div>
           </motion.div>
@@ -240,7 +240,7 @@ export default function Hero() {
                 {/* Tooltip confirmation */}
                 {showEmailTooltip && (
                   <div className="absolute -top-12 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-blue-500/90 text-white text-xs rounded-lg whitespace-nowrap">
-                    Email copied! 
+                    Email copied!
                     <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-green-500/90" />
                   </div>
                 )}

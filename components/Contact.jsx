@@ -18,7 +18,7 @@ export default function Contact() {
 
             <div className="space-y-4">
               <a
-                href="mailto:hammadsyed061@gmail.com"
+                href="mailto:hammadword08@gmail.com"
                 className="flex items-center gap-4 p-4 glass-card hover:border-primary-500/50 transition-all duration-300 group"
               >
                 <div className="p-3 bg-primary-500/10 rounded-xl text-primary-400 group-hover:bg-primary-500/20 transition-colors">
@@ -26,7 +26,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-dark-400 text-sm">Email</p>
-                  <p className="text-white font-medium">hammadsyed061@gmail.com</p>
+                  <p className="text-white font-medium">hammadword08@gmail.com</p>
                 </div>
               </a>
 
