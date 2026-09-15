@@ -5,7 +5,7 @@ const projects = [
     title: 'Otoboe Event Organization',
     description: 'Full-featured event organization website with booking & management systems.',
     category: 'Web Application',
-    link: 'https://www.otoobe.com/',
+    link: 'https://otoobe-event.vercel.app/',
   },
   {
     title: 'POS Admin Panel',
@@ -17,7 +17,7 @@ const projects = [
     title: 'Weather Updates',
     description: 'Real-time weather tracking application with location-based forecasts.',
     category: 'Web Application',
-    link: 'https://weather-appunique.netlify.app/',
+    link: 'https://weather-uptodate.netlify.app/',
   },
   {
     title: 'Onertrip',
@@ -32,16 +32,22 @@ const projects = [
     link: 'https://onereducation.eu/',
   },
   {
-    title: 'Luxum Builders',
-    description: 'Professional WordPress website for a construction & building company.',
-    category: 'WordPress',
-    link: 'https://www.luxumbuilders.com/',
+    title: 'Bait-ul-noor',
+    description: 'Full-featured Learning Management System with separate student, teacher, and admin dashboards.',
+    category: 'Next.js',
+    link: 'https://bait-ul-noor.vercel.app/',
   },
   {
-    title: 'Nature Fitness',
-    description: 'Fitness & wellness website with class schedules & membership management.',
+    title: 'Lost and Found Marketing',
+    description: 'Professional WordPress website for a marketing agency with portfolio & contact features.',
     category: 'WordPress',
-    link: 'https://nbnaturefitness.com/',
+    link: 'https://lostandfoundmarketing.com/',
+  },
+  {
+    title: 'Belknap Electric',
+    description: 'Professional WordPress website for an electrical services company with service listings & contact form.',
+    category: 'WordPress',
+    link: 'https://belknapelectric.com/',
   },
 ];
 
