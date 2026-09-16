@@ -47,7 +47,7 @@ export default function Education() {
               {/* Image Container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-dark-900">
                 <Image
-                  src="/img/class-edu.jfif" 
+                  src="/img/class-edu.png"
                   alt="Education & Academic Background"
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
@@ -80,8 +80,8 @@ export default function Education() {
                     </h3>
                     <span
                       className={`px-3 py-1 text-xs font-medium rounded-full ${edu.type === 'Current'
-                          ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-                          : 'bg-dark-700 text-dark-300'
+                        ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                        : 'bg-dark-700 text-dark-300'
                         }`}
                     >
                       {edu.type}

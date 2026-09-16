@@ -76,7 +76,7 @@ export default function Contact() {
               {/* Image Container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-dark-900">
                 <Image
-                  src="/img/contact.jfif" // Replace with your image path
+                  src="/img/contact.png" // Replace with your image path
                   alt="Contact Me"
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"

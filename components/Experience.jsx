@@ -56,8 +56,8 @@ export default function Experience() {
                 {/* Timeline Dot */}
                 <div
                   className={`absolute left-0 top-1 w-6 h-6 rounded-full border-2 flex items-center justify-center ${exp.current
-                      ? 'border-primary-400 bg-primary-400/20'
-                      : 'border-dark-600 bg-dark-800'
+                    ? 'border-primary-400 bg-primary-400/20'
+                    : 'border-dark-600 bg-dark-800'
                     }`}
                 >
                   <div
@@ -117,7 +117,7 @@ export default function Experience() {
               {/* Image Container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-dark-900">
                 <Image
-                  src="/img/profile.jfif" // Replace with your image URL or path
+                  src="/img/profile.png" // Replace with your image URL or path
                   alt="Work Experience"
                   fill
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
