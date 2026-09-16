@@ -1,3 +1,4 @@
+import Image from 'next/image'; // Import Next.js Image component (or use standard <img> if using Vite/React SPA)
 import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi';
 
 const experiences = [
@@ -21,12 +22,15 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-dark-950">
-      <div className="section-container">
+    <section id="experience" className="bg-dark-950 py-16">
+      <div className="section-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header Section */}
         <div className="text-center mb-16">
           <h2 className="section-title">Work Experience</h2>
           <p className="section-subtitle">My professional journey</p>
-          {/* Open to Work badge */}
+
+          {/* Open to Work Badge */}
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium border border-green-500/30">
             <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -36,66 +40,94 @@ export default function Experience() {
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 pb-12 last:pb-0">
-              {/* Timeline line */}
-              {index !== experiences.length - 1 && (
-                <div className="absolute left-[11px] top-12 bottom-0 w-0.5 bg-dark-700" />
-              )}
+        {/* 2-Column Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-              {/* Timeline dot */}
-              <div
-                className={`absolute left-0 top-1 w-6 h-6 rounded-full border-2 flex items-center justify-center ${exp.current
-                    ? 'border-primary-400 bg-primary-400/20'
-                    : 'border-dark-600 bg-dark-800'
-                  }`}
-              >
+          {/* LEFT SIDE: Experience Timeline (7 Columns on Large Screens) */}
+          <div className="lg:col-span-7">
+            {experiences.map((exp, index) => (
+              <div key={index} className="relative pl-8 pb-12 last:pb-0">
+
+                {/* Timeline Line */}
+                {index !== experiences.length - 1 && (
+                  <div className="absolute left-[11px] top-12 bottom-0 w-0.5 bg-dark-700" />
+                )}
+
+                {/* Timeline Dot */}
                 <div
-                  className={`w-2 h-2 rounded-full ${exp.current ? 'bg-primary-400' : 'bg-dark-500'
+                  className={`absolute left-0 top-1 w-6 h-6 rounded-full border-2 flex items-center justify-center ${exp.current
+                      ? 'border-primary-400 bg-primary-400/20'
+                      : 'border-dark-600 bg-dark-800'
                     }`}
+                >
+                  <div
+                    className={`w-2 h-2 rounded-full ${exp.current ? 'bg-primary-400' : 'bg-dark-500'
+                      }`}
+                  />
+                </div>
+
+                {/* Experience Content Card */}
+                <div className="glass-card ml-4 p-6 rounded-2xl bg-dark-900/50 border border-dark-800 backdrop-blur-md">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <h3 className="text-xl font-bold text-white">{exp.title}</h3>
+                    {exp.current && (
+                      <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
+                        Current
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-4 text-dark-400 text-sm mb-4">
+                    <span className="flex items-center gap-2">
+                      <FiBriefcase className="text-primary-400" />
+                      {exp.company}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <FiCalendar className="text-primary-400" />
+                      {exp.period}
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <FiMapPin className="text-primary-400" />
+                      {exp.location}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2">
+                    {exp.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-primary-500/10 text-primary-300 text-xs font-medium rounded-lg border border-primary-500/20"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+          {/* RIGHT SIDE: Image (5 Columns on Large Screens) */}
+          <div className="lg:col-span-5 flex justify-center items-center">
+            <div className="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-dark-700 shadow-2xl group">
+              {/* Decorative Glow Effect Behind Image */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-green-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+
+              {/* Image Container */}
+              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-dark-900">
+                <Image
+                  src="/img/profile.jfif" // Replace with your image URL or path
+                  alt="Work Experience"
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-
-              <div className="glass-card ml-4">
-                <div className="flex flex-wrap items-center gap-3 mb-3">
-                  <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                  {exp.current && (
-                    <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full">
-                      Current
-                    </span>
-                  )}
-                </div>
-
-                <div className="flex flex-wrap items-center gap-4 text-dark-400 text-sm mb-4">
-                  <span className="flex items-center gap-2">
-                    <FiBriefcase className="text-primary-400" />
-                    {exp.company}
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <FiCalendar className="text-primary-400" />
-                    {exp.period}
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <FiMapPin className="text-primary-400" />
-                    {exp.location}
-                  </span>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {exp.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-primary-500/10 text-primary-300 text-xs font-medium rounded-lg border border-primary-500/20"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
-          ))}
+          </div>
+
         </div>
+
       </div>
     </section>
   );
